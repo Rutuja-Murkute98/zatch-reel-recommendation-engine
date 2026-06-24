@@ -3,7 +3,7 @@ services:
     name: reel-recommendation-engine
     env: python
     plan: standard
-    buildCommand: pip install -r requirements.txt
+    buildCommand: python -m pip install --upgrade pip setuptools wheel && python -m pip install -r requirements.txt
     startCommand: gunicorn app:app --workers 1 --timeout 180 --bind 0.0.0.0:$PORT
     healthCheckPath: /health
     envVars:
