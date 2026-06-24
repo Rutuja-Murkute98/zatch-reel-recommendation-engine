@@ -1,0 +1,19 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local/editor files
+.env
+.DS_Store
+Thumbs.db
+
+# Training-only large artifacts not required by the deployed API
+data/recommendation_dataset.csv
+data/user_features.csv
+data/video_features.csv
+
+# Duplicate/backup deployment copy
+New/

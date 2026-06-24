@@ -1,0 +1,4 @@
+models/*.pkl filter=lfs diff=lfs merge=lfs -text
+data/interactions_cleaned.csv filter=lfs diff=lfs merge=lfs -text
+data/users_cleaned.csv filter=lfs diff=lfs merge=lfs -text
+data/videos_cleaned.csv filter=lfs diff=lfs merge=lfs -text
