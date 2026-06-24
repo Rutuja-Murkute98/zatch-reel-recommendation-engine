@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Recommendation Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<main class="container">
+    <header class="page-header">
+        <h1>Reel Recommendation Engine</h1>
+        <p>Hybrid real-time recommendations for an e-commerce reels feed.</p>
+    </header>
+
+    <section class="panel">
+        <div class="form-grid">
+            <label>
+                User ID
+                <input id="user_id" type="number" value="0" min="0">
+            </label>
+
+            <label>
+                Current Reel / Video ID
+                <input id="video_id" type="number" value="1527" min="0">
+            </label>
+
+            <label>
+                Results
+                <input id="top_n" type="number" value="10" min="1" max="50">
+            </label>
+        </div>
+
+        <div class="actions">
+            <button id="recommendBtn" type="button">Get Recommendations</button>
+            <button id="trendingBtn" type="button" class="secondary">Trending</button>
+            <button id="healthBtn" type="button" class="secondary">Health</button>
+        </div>
+    </section>
+
+    <section id="results" class="results"></section>
+</main>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
